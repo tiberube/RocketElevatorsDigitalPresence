@@ -19,7 +19,7 @@
 #topMain .menu-content {
 	display: table-cell;
 	vertical-align: middle;
-	color:#fff;
+	color:rgb(255, 255, 255);
 }
 #topMain .menu-content span a:hover,
 #topMain .menu-content p a:hover {
