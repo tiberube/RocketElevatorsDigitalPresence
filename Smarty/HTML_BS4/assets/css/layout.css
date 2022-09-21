@@ -1318,7 +1318,7 @@ section.dark.page-header ul.page-options a {
 	left:0; top:0; right:0;
 	z-index:1000;
 	font-size:14px;
-	background-color:#fff;
+	background-color:rgb(19, 19, 19);
 	border-bottom: rgba(0,0,0,0.05) 1px solid;
 
 	-webkit-box-shadow: 0 0 2px rgba(0,0,0,.1) !important;
@@ -5428,7 +5428,7 @@ section.page-header * {
 }
 .btn-default {
     color: #333;
-    background-color: #fff;
+    background-color: #416bc5;
     border-color: #ccc;
     border-width: 1px;
     padding: 6px 12px;

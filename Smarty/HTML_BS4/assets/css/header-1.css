@@ -3,7 +3,7 @@
 	line-height:96px;
 }
 #topMain.nav-pills>li>a {
-	color:#1F262D;
+	color:#404040;
 	font-weight:400;
 	background-color:transparent;
 } 
@@ -13,7 +13,7 @@
 	background-color:rgba(0,0,0,0.03);
 }
 #topMain.nav-pills>li.active>a {
-	color:#687482;
+	color:#416bc5;
 }
 
 #topMain.nav-pills>li>a.dropdown-toggle {
