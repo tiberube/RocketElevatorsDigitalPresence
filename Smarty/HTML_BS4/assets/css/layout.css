@@ -5427,9 +5427,9 @@ section.page-header * {
 	padding: 10px !important;
 }
 .btn-default {
-    color: #333;
+    color: rgb(255, 255, 255);
     background-color: #416bc5;
-    border-color: #ccc;
+    border-color: #416bc5;
     border-width: 1px;
     padding: 6px 12px;
     line-height: 26px;
@@ -7860,8 +7860,8 @@ section.dark #portfolio h3 {
 	filter: alpha(opacity=100);
 }
 
-.item-box .item-hover .inner .ico-rounded>span {
-	color:#666;
+.item-box .item-hover .inner .icon-bar>span {
+	color:#416bc5;
 	background-color:#fff;
 	width:50px; 
 	height:50px;

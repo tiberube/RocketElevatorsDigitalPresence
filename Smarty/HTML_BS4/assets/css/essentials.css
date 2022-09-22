@@ -1581,7 +1581,7 @@ section.dark .inline-search form button:hover {
 	z-index:10;
 }
 .parallax .btn-default {
-	background-color:transparent;
+	background-color:default;
 }
 .parallax .overlay {
 	background-color: rgba(34,34,34, .3);

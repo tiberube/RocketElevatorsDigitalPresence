@@ -74,7 +74,7 @@
 	.box-icon.box-icon-color i,
 	.switch-primary.switch-round > input:checked + .switch-label:after,
 	section.dark .nav-tabs.nav-clean>li>a.active { 
-		color: #FAB702; 
+		color: #416bc5; 
 	}
 	
 	#sidepanel.sidepanel-theme-color,
@@ -119,7 +119,7 @@
 	#progressBar #bar,								/* OWL */
 	#page-menu,
 	#page-menu ul {
-		background-color:#416bc5;
+		background-color:#dc3545;
 	}
 	
 	/* !important required */
@@ -159,7 +159,7 @@
 	.btn-primary:hover
 	.pagination>.active>a,
 	.pagination>.active>a:hover {
-		border-color: #FAB702;
+		border-color: #b30101;
 	}
 
 	#topNav ul.dropdown-menu { /* submenu border top color */
