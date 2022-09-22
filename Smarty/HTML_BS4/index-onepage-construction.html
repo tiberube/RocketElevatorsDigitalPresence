@@ -1175,7 +1175,7 @@
 
 					<header class="text-center mb-60">
 						<h2>Contact Us</h2>
-						<p class="lead font-lato">Lorem ipsum dolor sit amet adipiscium elit</p>
+						<p class="lead font-lato">Interested in our projects? Complete this entry to get in contact with us!</p>
 						<hr />
 					</header>
 
@@ -1239,23 +1239,27 @@
 
 									<div class="row">
 											<div class="col-md-4">
-												<label for="contact:name">Full Name *</label>
+												<label for="contact:name">Contact Full Name</label>
 												<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
 											</div>
 											<div class="col-md-4">
-												<label for="contact:email">E-mail Address *</label>
+												<label for="contact:email">Business Name</label>
 												<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
 											</div>
 											<div class="col-md-4">
-												<label for="contact:phone">Phone</label>
+												<label for="contact:phone">E-mail</label>
 												<input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
 											</div>
 									</div>
 									<div class="row">
-											<div class="col-md-8">
-												<label for="contact:subject">Subject *</label>
-												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
-											</div>
+										<div class="col-md-4">
+											<label for="contact:name">Project Name</label>
+											<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
+										</div>
+										<div class="col-md-4">
+											<label for="contact:email">Phone Number</label>
+											<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
+										</div>
 											<div class="col-md-4">
 												<label for="contact_department">Department</label>
 												<select class="form-control pointer" name="contact[department]">
@@ -1266,9 +1270,17 @@
 												</select>
 											</div>
 									</div>
+
 									<div class="row">
 											<div class="col-md-12">
-												<label for="contact:message">Message *</label>
+												<label for="contact:subject">Project Description</label>
+												<input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+											</div>
+									</div>
+
+									<div class="row">
+											<div class="col-md-12">
+												<label for="contact:message">Message</label>
 												<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
 											</div>
 									</div>
@@ -1320,10 +1332,16 @@
 							<hr />
 
 							<p>
-								<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> Street Name, City Name, Country</span>
-								<span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:1800-555-1234">1800-555-1234</a></span>
-								<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:mail@yourdomain.com">mail@yourdomain.com</a></span>
+								<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> 1165 Bd Lebourgneuf, Quebec, QC G2K 2C9</span>
+								<span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:1800-555-1234">+1 800-887-2497</a></span>
+								<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:mail@yourdomain.com">info@codeboxx.biz</a></span>
 							</p>
+
+							<li class="col-md-14 col-sm-14 col-20">
+								<a href="#">
+									<img class="img-fluid" src="demo_files/images/RR2.png" width='100' height='50' alt="client" />
+								</a>
+							</li>
 
 						</div>
 						<!-- /INFO -->
@@ -1351,9 +1369,9 @@
 
 							<!-- Small Description -->
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat.
+								We are the actual best elevator company in Quebec city with multiple awards. Even if we are located in Quebec, we still work with amazing companies such as Apple and Microsoft in the United States. Corporate or residential, WE are the ones who'll elevate your day to day life to another level!
 							</p>
-							<h2>(800) 123-4567</h2>
+							<h2>(800) 887-2497</h2>
 						</div>
 						<!-- /col #1 -->
 
@@ -1369,7 +1387,7 @@
 									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
 									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
 									<span class="input-group-btn">
-										<button class="btn btn-success" type="submit">Subscribe</button>
+										<button class="btn btn-default" type="submit">Subscribe</button>
 									</span>
 								</div>
 							</form>
@@ -1443,8 +1461,8 @@
 				**/
 				var map2 = new GMaps({
 					div: '#map2',
-					lat: -12.043333,
-					lng: -77.028333,
+					lat: 46.83570,
+					lng: -71.29184,
 					scrollwheel: false
 				});
 

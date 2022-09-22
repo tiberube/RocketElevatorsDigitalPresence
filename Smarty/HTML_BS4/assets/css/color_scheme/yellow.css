@@ -1,13 +1,13 @@
 /** Yellow	#FAB702
  **************************************************************** **/
 	::selection {
-		background: #FAB702;
+		background: #416bc5;
 	}
 	::-moz-selection {
-		background: #FAB702; /* Firefox */
+		background: #416bc5; /* Firefox */
 	}
 	::-webkit-selection {
-		background: #FAB702; /* Safari */
+		background: #46b4fe; /* Safari */
 	}
 
 
