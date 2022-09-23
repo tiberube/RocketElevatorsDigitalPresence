@@ -7348,11 +7348,11 @@ section#slider:not(.custom-form) .btn-default {
 	#slider:not(.custom-form) .btn {
 		margin-top:30px;
 	}
-	#slider:not(.custom-form) .btn-default,
-	.slider .btn-default {
+	#slider:not(.custom-form) .btn-default::shadow,
+	.slider .btn-default::shadow {
 		color:#fff;
-		background-color:transparent;
-		border-color:#fff;
+		background-color:#416bc5;
+		border-color:#416bc5;
 		border-width:2px;
 	}
 	#slider:not(.custom-form) .btn-default:hover,
@@ -7432,7 +7432,7 @@ section#slider:not(.custom-form) .btn-default {
 }
 #portfolio h2,
 #portfolio h3 {
-	font-size:18px;
+	font-size:30px;
 	line-height:20px;
 	margin:0;
 	color:#111;
