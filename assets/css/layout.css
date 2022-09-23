@@ -59,7 +59,7 @@ html, body {
 }
 body {
 	color:#666;
-	background-color:#fff;
+	background-color:rgb(33, 33, 33);
 	font-family:'Open Sans',Arial,Helvetica,sans-serif;
 	-webkit-font-smoothing: antialiased;
 
