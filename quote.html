@@ -27,6 +27,10 @@
 		<!-- PAGE LEVEL SCRIPTS -->
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/color_scheme/yellow.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+		<!-- JS -->
+		<script src="form.js"></script>
+
 	</head>
 
 	<!--
@@ -239,29 +243,99 @@
 						<h2>Quote Request</h2>
 					</div>
 
-					<div class="heading-title text-center"
-				        <p>Do you work with thousands of people? Tired of using the stairs? Great, we got you covered! We offer corporate elevators for entrepreneurs like you. Read more to get another level!</p>
+					<div>
+						<label>
+							<input type="radio" name="colorRadio" value="residential">Residential</label>
+						<label>
+							<input type="radio" name="colorRadio" value="commercial">Commercial</label>
+						<label>
+							<input type="radio" name="colorRadio" value="corporate">Corporate</label>
+						<label>
+							<input type="radio" name="colorRadio" value="hybrid">Hybrid</label>
 					</div>
-
-					<div class="row">
-						<div class="col-sm-4">
-							<img class="img-fluid" src="demo_files/images/corporate/CORP-service1.jpg" alt="img" />
-							<p></p>
-							<a href="#portfolio" class="btn btn-danger">READ MORE</a>
-						</div>
-
-						<div class="col-sm-4">
-							<img class="img-fluid" src="demo_files/images/corporate/CORP-service2.jpg" alt="img" />
-							<p></p>
-							<a href="#portfolio" class="btn btn-danger">READ MORE</a>
-
-						</div>
-
-						<div class="col-sm-4">	
-							<img class="img-fluid" src="demo_files/images/corporate/CORP-service3.png" alt="img" />
-							<p></p>
-							<a href="#portfolio" class="btn btn-danger">READ MORE</a>
-						</div>
+					
+					<div class="residential box">
+					  The number of appartments in the building:
+					  <input id="residentialNbAppartments" type="text">
+					</div>
+					<div class="residential box">
+					  The number of floors (excluding basements):
+					  <input id="residentialNbFloors" type="text">
+					</div>
+					<div class="residential box">
+					  The number of basements in the building:
+					  <input id="residentialNbBasements" type="text">
+					</div>
+					
+					
+					<div class="commercial box">
+					  The number of distinct businesses:
+					  <input id="commercialNbBusinesses" type="text">
+					</div>
+					<div class="commercial box">
+					  The number of floors (excluding basements):
+					  <input id="commercialNbFloors" type="text">
+					</div>
+					<div class="commercial box">
+					  The number of basements contained:
+					  <input id="commercialNbBasements" type="text">
+					</div>
+					<div class="commercial box">
+					  The number of parking spaces available:
+					  <input id="commercialNbParking" type="text">
+					</div>
+					<div class="commercial box">
+					  The number of elevator cages to be deployed:
+					  <input id="commercialNbElevator" type="text">
+					</div>
+					
+					
+					<div class="corporate box">
+					  The number of separate tenant companies:
+					  <input id="corporateNbCompanies" type="text">
+					</div>
+					<div class="corporate box">
+					  The number of floors (excluding basements):
+					  <input id="corporateNbFloors" type="text">
+					</div>
+					<div class="corporate box">
+					  The number of basements contained:
+					  <input id="corporateNbBasements" type="text">
+					</div>
+					<div class="corporate box">
+					  The number of parking spaces available:
+					  <input id="corporateNbParking" type="text">
+					</div>
+					<div class="corporate box">
+					  The max number of occupants per floor:
+					  <input id="corporateNbOccupants" type="text">
+					</div>
+					
+					
+					<div class="hybrid box">
+					  The number of distinct businesses:
+					  <input id="hybridNbBusinesses" type="text">
+					</div>
+					<div class="hybrid box">
+					  The number of floors (excluding basements):
+					  <input id="hybridNbFloors" type="text">
+					</div>
+					<div class="hybrid box">
+					  The number of basements contained:
+					  <input id="hybridNbBasements" type="text">
+					</div>
+					<div class="hybrid box">
+					  The number of parking spaces available:
+					  <input id="hybridNbParking" type="text">
+					</div>
+					<div class="hybrid box">
+					  The max number of occupants per floor:
+					  <input id="hybridNbOccupants" type="text">
+					</div>
+					<div class="hybrid box">
+					  The number of hours of activity of the building (max 24):
+					  <input id="hybridNbHours" type="text">
+					</div>
 
 						
 
@@ -277,7 +351,6 @@
 			<!-- FOOTER -->
 			<footer id="footer">
 				<div class="container">
-
 
 					<div class="row">
 
@@ -300,7 +373,6 @@
 
 							<!-- Newsletter Form -->
 							<p>Subscribe to Our Newsletter to get Important News & Offers</p>
-
 							<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
@@ -311,14 +383,9 @@
 								</div>
 							</form>
 							<!-- /Newsletter Form -->
-
-
 						</div>
 						<!-- /col #2 -->
-
 					</div>
-
-
 				</div>
 
 				<div class="copyright">
