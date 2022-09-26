@@ -1,7 +1,7 @@
 
 
 $(document).ready(function () {
-    $(".box").hide();
+    $(".building").hide();
     
     $("#residentialNbAppartments").on('keyup', function(event) {
       var residentialValue = $("#residentialNbAppartments").val();
@@ -91,22 +91,22 @@ $(document).ready(function () {
     
         if ($(this).attr("value") == "residential") {
             console.log("residential");
-            $(".box").hide();
+            $(".building").hide();
             $(".residential").show();
         }
         if ($(this).attr("value") == "commercial") {
           console.log("commercial");
-            $(".box").hide();
+            $(".building").hide();
             $(".commercial").show();
         }
         if ($(this).attr("value") == "corporate") {
           console.log("corporate");
-            $(".box").hide();
+            $(".building").hide();
             $(".corporate").show();
         }
         if ($(this).attr("value") == "hybrid") {
           console.log("hybrid");
-            $(".box").hide();
+            $(".building").hide();
             $(".hybrid").show();
         }
     });
