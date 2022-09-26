@@ -28,8 +28,7 @@
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/color_scheme/yellow.css" rel="stylesheet" type="text/css" id="color_scheme" />
 
-		<!-- JS -->
-		<script src="form.js"></script>
+	
 
 	</head>
 
@@ -235,7 +234,7 @@
 
 
 			
-			<!-- Quote -->
+			<!-- QUOTE -->
 			<section id="quote">
 				<div class="container">
 
@@ -244,106 +243,105 @@
 					</div>
 
 					<div>
+						<label> 
+							<input id="residential" type="radio" name="buildingType" value="residential">Residential</label>
 						<label>
-							<input type="radio" name="colorRadio" value="residential">Residential</label>
+							<input id="commercial" type="radio" name="buildingType" value="commercial">Commercial</label>
 						<label>
-							<input type="radio" name="colorRadio" value="commercial">Commercial</label>
+							<input id="corporate" type="radio" name="buildingType" value="corporate">Corporate</label>
 						<label>
-							<input type="radio" name="colorRadio" value="corporate">Corporate</label>
-						<label>
-							<input type="radio" name="colorRadio" value="hybrid">Hybrid</label>
+							<input id="hybrid" type="radio" name="buildingType" value="hybrid">Hybrid</label>
 					</div>
-					
+				</div>	
+
+			    <div>
 					<div class="residential box">
 					  The number of appartments in the building:
-					  <input id="residentialNbAppartments" type="text">
+					  <input id="residentialNbAppartments" type="number" step="1" min="0">
 					</div>
 					<div class="residential box">
 					  The number of floors (excluding basements):
-					  <input id="residentialNbFloors" type="text">
+					  <input id="residentialNbFloors" type="number" step="1" min="0">
 					</div>
 					<div class="residential box">
 					  The number of basements in the building:
-					  <input id="residentialNbBasements" type="text">
+					  <input id="residentialNbBasements" type="number" step="1" min="0">
 					</div>
-					
-					
+				
+
+				
 					<div class="commercial box">
 					  The number of distinct businesses:
-					  <input id="commercialNbBusinesses" type="text">
+					  <input id="commercialNbBusinesses" type="number" step="1" min="0">
 					</div>
 					<div class="commercial box">
 					  The number of floors (excluding basements):
-					  <input id="commercialNbFloors" type="text">
+					  <input id="commercialNbFloors" type="number" step="1" min="0">
 					</div>
 					<div class="commercial box">
 					  The number of basements contained:
-					  <input id="commercialNbBasements" type="text">
+					  <input id="commercialNbBasements" type="number" step="1" min="0">
 					</div>
 					<div class="commercial box">
 					  The number of parking spaces available:
-					  <input id="commercialNbParking" type="text">
+					  <input id="commercialNbParking" type="number" step="1" min="0">
 					</div>
 					<div class="commercial box">
 					  The number of elevator cages to be deployed:
-					  <input id="commercialNbElevator" type="text">
+					  <input id="commercialNbElevator" type="number" step="1" min="0">
 					</div>
-					
-					
+
+
 					<div class="corporate box">
 					  The number of separate tenant companies:
-					  <input id="corporateNbCompanies" type="text">
+					  <input id="corporateNbCompanies" type="number" step="1" min="0">
 					</div>
 					<div class="corporate box">
 					  The number of floors (excluding basements):
-					  <input id="corporateNbFloors" type="text">
+					  <input id="corporateNbFloors" type="number" step="1" min="0">
 					</div>
 					<div class="corporate box">
 					  The number of basements contained:
-					  <input id="corporateNbBasements" type="text">
+					  <input id="corporateNbBasements" type="number" step="1" min="0">
 					</div>
 					<div class="corporate box">
 					  The number of parking spaces available:
-					  <input id="corporateNbParking" type="text">
+					  <input id="corporateNbParking" type="number" step="1" min="0">
 					</div>
 					<div class="corporate box">
 					  The max number of occupants per floor:
-					  <input id="corporateNbOccupants" type="text">
-					</div>
-					
-					
+					  <input id="corporateNbOccupants" type="number" step="1" min="0">
+					</div>	
+
+				
 					<div class="hybrid box">
 					  The number of distinct businesses:
-					  <input id="hybridNbBusinesses" type="text">
+					  <input id="hybridNbBusinesses" type="number" step="1" min="0">
 					</div>
 					<div class="hybrid box">
 					  The number of floors (excluding basements):
-					  <input id="hybridNbFloors" type="text">
+					  <input id="hybridNbFloors" type="number" step="1" min="0">
 					</div>
 					<div class="hybrid box">
 					  The number of basements contained:
-					  <input id="hybridNbBasements" type="text">
+					  <input id="hybridNbBasements" type="number" step="1" min="0">
 					</div>
 					<div class="hybrid box">
 					  The number of parking spaces available:
-					  <input id="hybridNbParking" type="text">
+					  <input id="hybridNbParking" type="number" step="1" min="0">
 					</div>
 					<div class="hybrid box">
 					  The max number of occupants per floor:
-					  <input id="hybridNbOccupants" type="text">
+					  <input id="hybridNbOccupants" type="number" step="1" min="0">
 					</div>
 					<div class="hybrid box">
 					  The number of hours of activity of the building (max 24):
-					  <input id="hybridNbHours" type="text">
+					  <input id="hybridNbHours" type="number" step="1" min="0">
 					</div>
-
-						
-
-					</div>
-
 				</div>
+
 			</section>
-			<!-- /Services -->
+			<!-- /QUOTE -->
 
 
 
@@ -423,6 +421,9 @@
 		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
 
 		<script src="assets/js/scripts.js"></script>
+
+		<!-- JS -->
+		<script src="form.js"></script>
 
 		<!-- REVOLUTION SLIDER -->
 		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>

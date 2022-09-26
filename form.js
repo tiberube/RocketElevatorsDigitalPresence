@@ -1,4 +1,7 @@
+
+
 $(document).ready(function () {
+    $(".box").hide();
     
     $("#residentialNbAppartments").on('keyup', function(event) {
       var residentialValue = $("#residentialNbAppartments").val();
@@ -82,15 +85,13 @@ $(document).ready(function () {
       var hybridValue = $("#hybridNbHours").val();
       console.log("hybridValue is:", hybridValue);
     });
-    
-
 
     $('input[type="radio"]').click(function () {
         console.log("test");
     
         if ($(this).attr("value") == "residential") {
-                console.log("residential");
-               $(".box").hide();
+            console.log("residential");
+            $(".box").hide();
             $(".residential").show();
         }
         if ($(this).attr("value") == "commercial") {
@@ -109,4 +110,4 @@ $(document).ready(function () {
             $(".hybrid").show();
         }
     });
-});
+}); 
