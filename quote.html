@@ -237,135 +237,170 @@
 			<!-- QUOTE -->
 			<section id="quote">
 				<div class="container">
-
 					<div class="heading-title heading-dotted text-center">
 						<h2>Quote Request</h2>
 					</div>
-					
+
 					<div>
 						<label> 
-							<input id="residential" type="radio" name="buildingType" value="residential">Residential</label>
+							<input id="residential" type="radio" name="buildingType" value="residential">
+							Residential
+						</label>
 						<label>
-							<input id="commercial" type="radio" name="buildingType" value="commercial">Commercial</label>
+							<input id="commercial" type="radio" name="buildingType" value="commercial">
+							Commercial
+						</label>
 						<label>
-							<input id="corporate" type="radio" name="buildingType" value="corporate">Corporate</label>
+							<input id="corporate" type="radio" name="buildingType" value="corporate">
+							Corporate
+						</label>
 						<label>
-							<input id="hybrid" type="radio" name="buildingType" value="hybrid">Hybrid</label>
+							<input id="hybrid" type="radio" name="buildingType" value="hybrid">
+							Hybrid
+						</label>
 					</div>
-
 				</div>	
 
+				<!-- RESIDENTIAL -->
 			    <div>
 					<div class="residential building">
 					  The number of appartments in the building:
-					  <input id="residentialNbAppartments" type="number" step="1" min="0">
+					  <input id="residentialNbAppartments" type="text">
 					</div>
 					<div class="residential building">
 					  The number of floors (excluding basements):
-					  <input id="residentialNbFloors" type="number" step="1" min="0">
+					  <input id="residentialNbFloors" type="text">
 					</div>
 					<div class="residential building">
 					  The number of basements in the building:
-					  <input id="residentialNbBasements" type="number" step="1" min="0">
+					  <input id="residentialNbBasements" type="text">
 					</div>
-				</div>
+				</div> 
+				<!-- /RESIDENTIAL -->
 
+				<!-- COMMERCIAL -->
 				<div>
 					<div class="commercial building">
 					  The number of distinct businesses:
-					  <input id="commercialNbBusinesses" type="number" step="1" min="0">
+					  <input id="commercialNbBusinesses" type="text">
 					</div>
 					<div class="commercial building">
 					  The number of floors (excluding basements):
-					  <input id="commercialNbFloors" type="number" step="1" min="0">
+					  <input id="commercialNbFloors" type="text">
 					</div>
 					<div class="commercial building">
 					  The number of basements contained:
-					  <input id="commercialNbBasements" type="number" step="1" min="0">
+					  <input id="commercialNbBasements" type="text">
 					</div>
 					<div class="commercial building">
 					  The number of parking spaces available:
-					  <input id="commercialNbParking" type="number" step="1" min="0">
+					  <input id="commercialNbParking" type="text">
 					</div>
 					<div class="commercial building">
 					  The number of elevator cages to be deployed:
-					  <input id="commercialNbElevator" type="number" step="1" min="0">
+					  <input id="commercialNbElevator" type="text">
 					</div>
-				</div>
+				</div> 
+				<!-- /COMMERCIAL -->
 
+				<!-- CORPORATE -->
                 <div>
 					<div class="corporate building">
 					  The number of separate tenant companies:
-					  <input id="corporateNbCompanies" type="number" step="1" min="0">
+					  <input id="corporateNbCompanies" type="text">
 					</div>
 					<div class="corporate building">
 					  The number of floors (excluding basements):
-					  <input id="corporateNbFloors" type="number" step="1" min="0">
+					  <input id="corporateNbFloors" type="text">
 					</div>
 					<div class="corporate building">
 					  The number of basements contained:
-					  <input id="corporateNbBasements" type="number" step="1" min="0">
+					  <input id="corporateNbBasements" type="text">
 					</div>
 					<div class="corporate building">
 					  The number of parking spaces available:
-					  <input id="corporateNbParking" type="number" step="1" min="0">
+					  <input id="corporateNbParking" type="text">
 					</div>
 					<div class="corporate building">
 					  The max number of occupants per floor:
-					  <input id="corporateNbOccupants" type="number" step="1" min="0">
+					  <input id="corporateNbOccupants" type="text">
 					</div>	
-                </div>
+                </div> 
+				<!-- /CORPORATE -->
 				
+				<!-- HYBRID -->
 				<div>
 					<div class="hybrid building">
 					  The number of distinct businesses:
-					  <input id="hybridNbBusinesses" type="number" step="1" min="0">
+					  <input id="hybridNbBusinesses" type="text">
 					</div>
 					<div class="hybrid building">
 					  The number of floors (excluding basements):
-					  <input id="hybridNbFloors" type="number" step="1" min="0">
+					  <input id="hybridNbFloors" type="text">
 					</div>
 					<div class="hybrid building">
 					  The number of basements contained:
-					  <input id="hybridNbBasements" type="number" step="1" min="0">
+					  <input id="hybridNbBasements" type="text">
 					</div>
 					<div class="hybrid building">
 					  The number of parking spaces available:
-					  <input id="hybridNbParking" type="number" step="1" min="0">
+					  <input id="hybridNbParking" type="text">
 					</div>
 					<div class="hybrid building">
 					  The max number of occupants per floor:
-					  <input id="hybridNbOccupants" type="number" step="1" min="0">
+					  <input id="hybridNbOccupants" type="text">
 					</div>
 					<div class="hybrid building">
 					  The number of hours of activity of the building (max 24):
-					  <input id="hybridNbHours" type="number" step="1" min="0">
+					  <input id="hybridNbHours" type="text">
 					</div>
-				</div>
+				</div> 
+				<!-- /HYBRID -->
 
 				<div>
-				    <div class="row">
-					  <input id="priceUnitStandard" type="radio" name="building-type" value="standard">
-					  Standard
-					  <input id="priceUnitPremium" type="radio" name="building-type" value="premium">
-					  Premium
-					  <input id="priceUnitExcelium" type="radio" name="building-type" value="excelium">
-					  Excelium
-				    </div>
+					<div>
+						<label> 
+							<input id="priceUnitStandard" type="radio" name="building-type" value="standard">
+							Standard
+						</label>
+						<label>
+							<input id="priceUnitPremium" type="radio" name="building-type" value="premium">
+							Premium
+						</label>
+						<label>
+							<input id="priceUnitExcelium" type="radio" name="building-type" value="excelium">
+							Excelium
+						</label>
+					</div>
+
 				    <br>
-					
-				   <div class="readonly-fields">
-				      <div>
-					    <label>Price:</label>
-					    <input id="priceUnit" class="form-control" name="building-type" type="number" value="" readonly>
-				      </div>
-				   </div>
+
+				    <div class="readonly-fields">
+					    <div class="col-sm-1">
+						    <label>Amount of elevators needed:</label>
+						    <input id="NbElevators" class="form-control" name="building-type" type="number" value="" readonly>
+					    </div>
+					    <div class="col-sm-1">
+						    <label>Unit price for each elevators:</label>
+						    <input id="priceUnit" class="form-control" name="building-type" type="number" value="" readonly>
+					    </div>
+					    <div class="col-sm-1">
+						   <label>Total price for all the elevators:</label>
+						   <input id="priceAll" class="form-control" name="building-type" type="number" value="" readonly>
+					    </div>
+					    <div class="col-sm-1">
+						   <label>Installation fees:</label>
+						   <input id="fees" class="form-control" name="building-type" type="number" value="" readonly>
+					    </div>
+					    <div class="col-sm-1">
+						   <label>final price:</label>
+						   <input id="finalPrice" class="form-control" name="building-type" type="number" value="" readonly>
+					    </div>
+				    </div>
 				</div>
 
 			</section>
 			<!-- /QUOTE -->
-
-
 
 
 			<!-- FOOTER -->

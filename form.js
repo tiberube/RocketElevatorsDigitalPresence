@@ -1,6 +1,6 @@
 
 
-$(document).ready(function () {
+  $(document).ready(function () {
     $(".building").hide();
     
     $("#residentialNbAppartments").on('keyup', function(event) {
@@ -17,7 +17,7 @@ $(document).ready(function () {
     });
     
     
-      $("#commercialNbBusinesses").on('keyup', function(event) {
+    $("#commercialNbBusinesses").on('keyup', function(event) {
       var commercialValue = $("#commercialNbBusinesses").val();
       console.log("commercialValue is:", commercialValue);
     });
@@ -95,17 +95,17 @@ $(document).ready(function () {
             $(".residential").show();
         }
         if ($(this).attr("value") == "commercial") {
-          console.log("commercial");
+            console.log("commercial");
             $(".building").hide();
             $(".commercial").show();
         }
         if ($(this).attr("value") == "corporate") {
-          console.log("corporate");
+            console.log("corporate");
             $(".building").hide();
             $(".corporate").show();
         }
         if ($(this).attr("value") == "hybrid") {
-          console.log("hybrid");
+            console.log("hybrid");
             $(".building").hide();
             $(".hybrid").show();
         }
@@ -123,5 +123,13 @@ $(document).ready(function () {
         if ($(this).attr("value") == "excelium") {
             $("#priceUnit").val(15400);
         }
-      });
-}); 
+    });
+
+    $('input[name="commercialNbElevators"]').click(function () {
+        console.log("test");      
+        if ($(this).attr("value") == "commercial") {
+            $("#NbElevators").val(20);
+        }
+    });
+  }); 
+  
