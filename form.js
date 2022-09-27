@@ -110,4 +110,18 @@ $(document).ready(function () {
             $(".hybrid").show();
         }
     });
+
+    $('input[name="building-type"]').click(function () {
+      console.log("test");
+              
+        if ($(this).attr("value") == "standard") {
+            $("#priceUnit").val(7565);
+        }
+        if ($(this).attr("value") == "premium") {
+            $("#priceUnit").val(12345);
+        }
+        if ($(this).attr("value") == "excelium") {
+            $("#priceUnit").val(15400);
+        }
+      });
 }); 
