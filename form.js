@@ -36,8 +36,9 @@
     $("#commercialNbElevator").on('keyup', function(event) {
       var commercialValue = $("#commercialNbElevator").val();
       console.log("commercialValue is:", commercialValue);
+
+      $("#amountOfElevatorsNeeded").val(commercialValue);
     });
-    
     
     $("#corporateNbCompanies").on('keyup', function(event) {
       var corporateValue = $("#corporateNbCompanies").val();
@@ -115,23 +116,29 @@
       console.log("test");
               
         if ($(this).attr("value") == "standard") {
-            $("#priceUnit").val(7565);
+            $("#priceUnitElevators").val(7565);
+            $("#priceAllElevators").val($("#amountOfElevatorsNeeded").val() * $("#priceUnitElevators").val());
+            $("#installationFees").val($("#priceAllElevators").val() * 0.10);
+            $("#finalPrice").val($("#priceAllElevators").val() + $("#installationFees").val());
         }
         if ($(this).attr("value") == "premium") {
-            $("#priceUnit").val(12345);
+            $("#priceUnitElevators").val(12345);
+            $("#priceAllElevators").val($("#amountOfElevatorsNeeded").val() * $("#priceUnitElevators").val());
+            $("#installationFees").val($("#priceAllElevators").val() * 0.13);
+            $("#finalPrice").val($("#priceAllElevators").val() + $("#installationFees").val());
         }
         if ($(this).attr("value") == "excelium") {
-            $("#priceUnit").val(15400);
-        }
-    });
-
-    $('input[name="commercialNbElevators"]').click(function () {
-        console.log("test");      
-        if ($(this).attr("value") == "commercial") {
-            $("#NbElevators").val(20);
+            $("#priceUnitElevators").val(15400);
+            $("#priceAllElevators").val($("#amountOfElevatorsNeeded").val() * $("#priceUnitElevators").val());
+            $("#installationFees").val($("#priceAllElevators").val() * 0.16);
+            $("#finalPrice").val($("#priceAllElevators").val() + $("#installationFees").val());
         }
     });
   }); 
-  
 
-  Test
+
+  
+  //this.value = "$" + parseFloat(this.value.replace(/(,|\$)/g, ""))
+  //accounting.formatid($("#priceUnitElevators").val(), " ");
+  //accounting.formatNumber(9876543.21, 3, " ");
+  //accounting.formatMoney(number,[symbol = "$"],[precision = 2],[thousand = ","],[decimal = "."],[format = "%s%v"])
