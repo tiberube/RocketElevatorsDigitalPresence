@@ -161,7 +161,7 @@
     });
     //RESIDENTIAL
 
-    //CORPORATE/HYBRID
+    //CORPORATE
     $("#corporateNbOccupants, #corporateNbFloors, #corporateNbBasements").each(function () {
       $(this).keyup(function () {
         var nbFloors = $("#corporateNbFloors").val()
@@ -187,5 +187,32 @@
         $("#amountOfElevatorsNeeded").val(totalElevators);
       });
     });
-    
+
+    //HYBRID
+    $("#hybridNbOccupants, #hybridNbFloors, #hybridNbBasements").each(function () {
+      $(this).keyup(function () {
+        var nbFloors = $("#hybridNbFloors").val()
+        var nbBasements = $("#hybridNbBasements").val()
+        var nbOccupants = $("#hybridNbOccupants").val()
+
+        //Elevators
+        var occupantsFloors = (nbOccupants * nbFloors);
+        var occupantsBasements = (nbOccupants * nbBasements);
+        var totalOccupants = (+occupantsFloors) + (+occupantsBasements);
+        var elevatorsNeeded = (totalOccupants / 1000);
+        
+        //Total Columns
+        var columnsFloors = (nbFloors / 20);
+        var columnsBasements = (nbBasements / 20);
+        var totalColumns = (+columnsFloors) + (+columnsBasements);
+
+        //Elevators per Column
+        var elevatorsPerColumn = (elevatorsNeeded / totalColumns);
+
+        //Total Elevators!!!
+        var totalElevators = (elevatorsPerColumn * totalColumns)
+        $("#amountOfElevatorsNeeded").val(totalElevators);
+      });
+    });
+
   }); 
