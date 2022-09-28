@@ -40,6 +40,7 @@
       $("#amountOfElevatorsNeeded").val(commercialValue);
     });
     
+    
     $("#corporateNbCompanies").on('keyup', function(event) {
       var corporateValue = $("#corporateNbCompanies").val();
       console.log("corporateValue is:", corporateValue);
@@ -112,33 +113,79 @@
         }
     });
 
-    $('input[name="building-type"]').click(function () {
+    $('input[name="elevator-type"]').click(function () {
       console.log("test");
               
         if ($(this).attr("value") == "standard") {
             $("#priceUnitElevators").val(7565);
             $("#priceAllElevators").val($("#amountOfElevatorsNeeded").val() * $("#priceUnitElevators").val());
             $("#installationFees").val($("#priceAllElevators").val() * 0.10);
-            $("#finalPrice").val($("#priceAllElevators").val() + $("#installationFees").val());
+            
+            var final =
+              parseInt($("#priceAllElevators").val()) +
+              parseInt($("#installationFees").val());
+            $("#finalPrice").val(final);
         }
         if ($(this).attr("value") == "premium") {
             $("#priceUnitElevators").val(12345);
             $("#priceAllElevators").val($("#amountOfElevatorsNeeded").val() * $("#priceUnitElevators").val());
             $("#installationFees").val($("#priceAllElevators").val() * 0.13);
-            $("#finalPrice").val($("#priceAllElevators").val() + $("#installationFees").val());
+
+            var final =
+              parseInt($("#priceAllElevators").val()) +
+              parseInt($("#installationFees").val());
+            $("#finalPrice").val(final);
         }
         if ($(this).attr("value") == "excelium") {
             $("#priceUnitElevators").val(15400);
             $("#priceAllElevators").val($("#amountOfElevatorsNeeded").val() * $("#priceUnitElevators").val());
             $("#installationFees").val($("#priceAllElevators").val() * 0.16);
-            $("#finalPrice").val($("#priceAllElevators").val() + $("#installationFees").val());
+
+            var final =
+              parseInt($("#priceAllElevators").val()) +
+              parseInt($("#installationFees").val());
+            $("#finalPrice").val(final);
         }
     });
+
+    //RESIDENTIAL
+    $("#residentialNbApartments, #residentialNbFloors").each(function () {
+      $(this).keyup(function () {
+        var residentialNbFloors = $("#residentialNbFloors").val();
+        if (residentialNbFloors > 0) {
+          var average = $("#residentialNbApartments").val() / residentialNbFloors;
+          console.log(average);
+          $("#amountOfElevatorsNeeded").val(Math.ceil(average));
+        }
+      });
+    });
+    //RESIDENTIAL
+
+    //CORPORATE/HYBRID
+    $("#corporateNbOccupants, #corporateNbFloors, #corporateNbBasements").each(function () {
+      $(this).keyup(function () {
+        var nbFloors = $("#corporateNbFloors").val()
+        var nbBasements = $("#corporateNbBasements").val()
+        var nbOccupants = $("#corporateNbOccupants").val()
+
+        //Elevators
+        var occupantsFloors = (nbOccupants * nbFloors);
+        var occupantsBasements = (nbOccupants * nbBasements);
+        var totalOccupants = (+occupantsFloors) + (+occupantsBasements);
+        var elevatorsNeeded = (totalOccupants / 1000);
+        
+        //Total Columns
+        var columnsFloors = (nbFloors / 20);
+        var columnsBasements = (nbBasements / 20);
+        var totalColumns = (+columnsFloors) + (+columnsBasements);
+
+        //Elevators per Column
+        var elevatorsPerColumn = (elevatorsNeeded / totalColumns);
+
+        //Total Elevators!!!
+        var totalElevators = (elevatorsPerColumn * totalColumns)
+        $("#amountOfElevatorsNeeded").val(totalElevators);
+      });
+    });
+    
   }); 
-
-
-  
-  //this.value = "$" + parseFloat(this.value.replace(/(,|\$)/g, ""))
-  //accounting.formatid($("#priceUnitElevators").val(), " ");
-  //accounting.formatNumber(9876543.21, 3, " ");
-  //accounting.formatMoney(number,[symbol = "$"],[precision = 2],[thousand = ","],[decimal = "."],[format = "%s%v"])
