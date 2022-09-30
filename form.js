@@ -1,8 +1,9 @@
 
-
+// QUOTE FORM JS
   $(document).ready(function () {
     $(".building").hide();
     
+    //RESIDENTIAL (Values)
     $("#residentialNbAppartments").on('keyup', function(event) {
       var residentialValue = $("#residentialNbAppartments").val();
       console.log("residentialValue is:", residentialValue);
@@ -16,7 +17,7 @@
       console.log("residentialValue is:", residentialValue);
     });
     
-    
+    //COMMERCIAL (Values)
     $("#commercialNbBusinesses").on('keyup', function(event) {
       var commercialValue = $("#commercialNbBusinesses").val();
       console.log("commercialValue is:", commercialValue);
@@ -40,7 +41,7 @@
       $("#amountOfElevatorsNeeded").val(commercialValue);
     });
     
-    
+    //CORPORATE (Values)
     $("#corporateNbCompanies").on('keyup', function(event) {
       var corporateValue = $("#corporateNbCompanies").val();
       console.log("corporateValue is:", corporateValue);
@@ -62,7 +63,7 @@
       console.log("corporateValue is:", corporateValue);
     });
     
-    
+    //HYBRID (Values)
     $("#hybridNbBusinesses").on('keyup', function(event) {
       var hybridValue = $("#hybridNbBusinesses").val();
       console.log("hybridValue is:", hybridValue);
@@ -88,6 +89,7 @@
       console.log("hybridValue is:", hybridValue);
     });
 
+    // RADIO BUTTONS (Building type)
     $('input[type="radio"]').click(function () {
         console.log("test");
     
@@ -113,34 +115,44 @@
         }
     });
 
+    //RADIO BUTTONS (Elevator type/quality, prices)
+    // With their variables for prices**
     $('input[name="elevator-type"]').click(function () {
       console.log("test");
-              
+        
+        //Standard price (with id)
         if ($(this).attr("value") == "standard") {
             $("#priceUnitElevators").val(7565);
             $("#priceAllElevators").val($("#amountOfElevatorsNeeded").val() * $("#priceUnitElevators").val());
             $("#installationFees").val($("#priceAllElevators").val() * 0.10);
             
+            //Final price (with new variable)
             var final =
               parseInt($("#priceAllElevators").val()) +
               parseInt($("#installationFees").val());
             $("#finalPrice").val(final);
         }
+
+        //Premium price (with id)
         if ($(this).attr("value") == "premium") {
             $("#priceUnitElevators").val(12345);
             $("#priceAllElevators").val($("#amountOfElevatorsNeeded").val() * $("#priceUnitElevators").val());
             $("#installationFees").val($("#priceAllElevators").val() * 0.13);
 
+            //Final price (with new variable)
             var final =
               parseInt($("#priceAllElevators").val()) +
               parseInt($("#installationFees").val());
             $("#finalPrice").val(final);
         }
+
+        //Excelium price (with id)
         if ($(this).attr("value") == "excelium") {
             $("#priceUnitElevators").val(15400);
             $("#priceAllElevators").val($("#amountOfElevatorsNeeded").val() * $("#priceUnitElevators").val());
             $("#installationFees").val($("#priceAllElevators").val() * 0.16);
 
+            //Final price (with new variable)
             var final =
               parseInt($("#priceAllElevators").val()) +
               parseInt($("#installationFees").val());
@@ -159,7 +171,6 @@
         }
       });
     });
-    //RESIDENTIAL
 
     //CORPORATE
     $("#corporateNbOccupants, #corporateNbFloors, #corporateNbBasements").each(function () {
@@ -183,11 +194,11 @@
         var elevatorsPerColumn = (elevatorsNeeded / totalColumns);
 
         //Total Elevators!!!
-        var totalElevators = (elevatorsPerColumn * totalColumns)
-        $("#amountOfElevatorsNeeded").val(totalElevators);
+        var totalElevators = Math.ceil(elevatorsPerColumn * totalColumns)
+        $("#amountOfElevatorsNeeded").val(totalElevators); 
       });
     });
-
+    
     //HYBRID
     $("#hybridNbOccupants, #hybridNbFloors, #hybridNbBasements").each(function () {
       $(this).keyup(function () {
@@ -214,5 +225,5 @@
         $("#amountOfElevatorsNeeded").val(totalElevators);
       });
     });
-
-  }); 
+  });
+// QUOTE FORM JS
